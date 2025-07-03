@@ -291,7 +291,7 @@ export async function generateQuizQuestions({
     throw new Error("Unauthorized - Only admins can generate questions");
   }
 
-  const res = await fetch("http://localhost:3000/api/quiz/generate", {
+  const res = await fetch("https://quiz-phi-flax.vercel.app/api/quiz/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -320,7 +320,7 @@ export async function generateQuizQuestionsFromPrompt(prompt: string) {
     throw new Error("Unauthorized - Only admins can generate questions");
   }
 
-  const res = await fetch("http://localhost:3000/api/quiz/generate", {
+  const res = await fetch("https://quiz-phi-flax.vercel.app/api/quiz/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

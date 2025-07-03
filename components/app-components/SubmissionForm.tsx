@@ -53,7 +53,6 @@ const SubmissionForm = ({ data, qid }: { data: Question[]; qid: string }) => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 5000));
 
     try {
       const submissionData: SubmissionType = {
@@ -128,7 +127,9 @@ const SubmissionForm = ({ data, qid }: { data: Question[]; qid: string }) => {
                           >
                             {i + 1}
                           </div>
-                          <h3 className="text-lg leading-relaxed">{q.question}</h3>
+                          <h3 className="text-lg leading-relaxed">
+                            {q.question}
+                          </h3>
                         </FormLabel>
 
                         <div className="ml-8">
