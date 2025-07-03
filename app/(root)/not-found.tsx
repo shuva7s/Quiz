@@ -1,6 +1,4 @@
 import Back from "@/components/shared/Back";
-import Link from "next/link";
-
 export default function NotFound() {
   return (
     <main className="min-h-screen fl_center flex-col my-0 wrapper">
